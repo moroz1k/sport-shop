@@ -1,0 +1,4 @@
+@include font-face('PT Sans', $fonts + '/PTSans/PTSans-Regular', normal, normal);
+@include font-face('PT Sans', $fonts + '/PTSans/PTSans-Bold', bold, normal);
+
+@include font-face('Kraft', $fonts + '/Kraft/Kraft', normal, normal);

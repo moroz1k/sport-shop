@@ -1,0 +1,54 @@
+@mixin overlay() {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin hover() {
+    transition: 0.2s ease-out;
+
+    @include ad($tablet) {
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: ttf) {
+    $src: null;
+
+    $extmods: (
+        eot: "?",
+        svg: "#" + str-replace($name, " ", "_")
+    );
+
+    $formats: (
+        ttf: "truetype"
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin ad( $value, $prop: max-width ) {
+    @media only screen and (#{$prop}: #{$value}) {
+        @content
+    }
+}

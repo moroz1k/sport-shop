@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+  font: 200 18px $font-main;
+  color: #444;
+}
+
+body {
+  cursor: default;
+  min-width: 1260px;
+  overflow-y: scroll;
+}
+
+h1, h2 {
+  padding-left: 20px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+  display: flex;
+  align-items: center;
+
+  border-left: 2px solid #F48221;
+
+  //font-size: 24px;
+  font-weight: normal;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+
+  &.link {
+    color: $color-main;
+    text-decoration: none;
+
+    border-bottom: 1px dashed $color-main;
+
+    transition: 0.1s ease-out;
+
+    &:hover {
+      border-color: transparent;
+    }
+  }
+}
+
+input[type=text] {
+  max-width: 300px;
+  width: 100%;
+  height: 41px;
+  margin-top: 8px;
+  padding: 11px;
+
+  border: 1px solid #F1EFEF;
+  border-radius: $border-radius;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  transition: 0.1s ease-out;
+
+  &:hover, &:focus {
+    outline: 0;
+  }
+
+  &:focus {
+    border-color: $color-main;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(68, 68, 68, 0.5);
+
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+
+    transition: 0.1s ease-out;
+  }
+}
+
+textarea {
+  max-width: 300px;
+  width: 100%;
+  height: 160px;
+  margin-top: 8px;
+  padding: 11px;
+
+  border: 1px solid #F1EFEF;
+  border-radius: $border-radius;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  transition: 0.1s ease-out;
+
+  &:hover, &:focus {
+    outline: 0;
+  }
+
+  &:focus {
+    border-color: $color-main;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(68, 68, 68, 0.5);
+
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.5);
+
+    transition: 0.1s ease-out;
+  }
+}
+
+.container {
+  max-width: 1260px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.btn {
+  max-width: 300px;
+  width: 100%;
+  height: 41px;
+  margin-top: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $font-main;
+  font-weight: bold;
+  font-size: 16px;
+
+  color: #FFFFFF;
+
+  background: $color-main;
+  border-radius: $border-radius;
+  border: none;
+
+  transition: 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($color-main, 15%);
+  }
+
+  &-grey {
+    background: #b7b7b7;
+    color: white;
+
+    &:hover {
+      background: lighten(#DDDDDD, 1)
+    }
+  }
+}

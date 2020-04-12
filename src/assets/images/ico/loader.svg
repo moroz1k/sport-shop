@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="#F48221" width="50px" height="50px">
+          <g>
+            <g>
+              <g>
+                <path d="M448,144V96h-96v112H160V96H64v48H0v224h64v48h96V304h192v112h96v-48h64V144H448z M64,336H32V176h32V336z M128,384H96
+                  V128h32V384z M352,272H160v-32h192V272z M416,384h-32V128h32V384z M480,336h-32V176h32V336z"/>
+<!--                  <rect x="208" y="128" width="32" height="32"/>-->
+<!--                  <rect x="272" y="128" width="32" height="32"/>-->
+              </g>
+            </g>
+          </g>
+        </svg>
